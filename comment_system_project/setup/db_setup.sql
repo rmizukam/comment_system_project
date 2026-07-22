@@ -27,7 +27,7 @@ CREATE TABLE IF NOT EXISTS raw_lines (
     line TEXT
 );
 
-\COPY raw_lines FROM './comments.json' WITH (FORMAT text);
+\COPY raw_lines FROM './comment_system_project/setup/comments.json' WITH (FORMAT text);
 
 INSERT INTO json_stage (raw_content)
 SELECT string_agg(line, E'\n') FROM raw_lines;

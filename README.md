@@ -36,7 +36,8 @@ pip install python-dotenv
     - ensure that the manage.py file is within the present working directory
     - create a file called ".env"
     - add a line in the file `DB_PASSWORD=<INSERT_POSTGRESQL_PASSWORD_HERE>` and fill in your password.
-    - From the root of the repository run the command `psql -U postgres -h localhost -f comment_system_project/comment_system_project/setup/db_setup.sql`
+    - Navigate to the root of the repository
+    - Run the command `psql -U postgres -h localhost -f comment_system_project/setup/db_setup.sql`
     - Enter your PostgreSQL password and the comments.json file will be injested.
 
 ### Starting the Servers
